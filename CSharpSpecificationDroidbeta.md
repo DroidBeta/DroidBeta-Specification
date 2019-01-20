@@ -6,7 +6,7 @@ Droidbeta C# 格式规范基于 C 系列语言的 Allman 编码格式制定，�
 
 ## 强制规范
 
-Droidbeta 建议使用 Tab 字符（ '\t' ， '	'）作为缩进字符，并将 Tab 宽度设为 4 个半角空格。若 Tab 显示不正常也可直接使用 4 个半角空格代替，但在发布至团队协作项目或开源时应替换为 Tab 字符。
+Droidbeta 建议使用 Tab 字符（ '\t' ， `	`）作为缩进字符，并将 Tab 宽度设为 4 个半角空格。若 Tab 显示不正常也可直接使用 4 个半角空格代替，但在发布至团队协作项目或开源时应替换为 Tab 字符。
 
 允许使用 using 语句精简类名，但是除非另有需要，不应使用 using static 语句，以减少命名空间污染。
 
@@ -25,7 +25,7 @@ using System;
 namespace MyConsoleApplication
 {
 	public class MyConsole
-    {
+	{
         public static void Main ()
         {
             int sum, a, b;
