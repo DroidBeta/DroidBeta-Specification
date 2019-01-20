@@ -24,8 +24,8 @@ Droidbeta 建议使用 Tab 字符（ '\t' ， `	`）作为缩进字符，并将 
 using System;
 namespace MyConsoleApplication
 {
-	public class MyConsole
-	{
+    public class MyConsole
+    {
         public static void Main ()
         {
             int sum, a, b;
