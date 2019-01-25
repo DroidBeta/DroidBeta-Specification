@@ -70,7 +70,6 @@ int Zero()
 
 不应使用
 
-~~
 ```C#
 //This method returns an int value of 0.
 int Zero()
@@ -78,4 +77,3 @@ int Zero()
     return 0;
 }
 ```
-~~ 
