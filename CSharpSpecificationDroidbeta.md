@@ -31,39 +31,22 @@ DroidBeta 建议使用 Tab 字符（ `\t` ， `	`）作为缩进字符，并将 
 运算符与前后变量或常量间保留一个空格，但成员运算符（点号， `.` ）和圆括号、方括号前后不空格；逗号、分号前面空格，但后面不空格。
 
 ```Csharp
-
 using System;
-
 namespace MyConsoleApplication
-
 {
-
-public class MyConsole
-
-{
-
-public static void Main()
-
-{
-
-int sum, addend1, addend2;
-
-string outputString;
-
-addend1 = Convert.ToInt32(Console.ReadLine());
-
-addend2 = Convert.ToInt32(Console.ReadLine());
-
-sum = addend1 + addend2;
-
-outputString = String.Format("{0} + {1} = {2}", addend1, addend2, sum);
-
-Console.WriteLine(outputString);
-
-}
-
-}
-
+    public class MyConsole
+    {
+        public static void Main()
+        {
+            int sum, addend1, addend2;
+            string outputString;
+            addend1 = Convert.ToInt32(Console.ReadLine());
+            addend2 = Convert.ToInt32(Console.ReadLine());
+            sum = addend1 + addend2;
+            outputString = String.Format("{0} + {1} = {2}", addend1, addend2, sum);
+            Console.WriteLine(outputString);
+        }
+    }
 }
 
 ```
@@ -73,43 +56,28 @@ Console.WriteLine(outputString);
 尽量避免使用过长语句。除非语句长度过长（超过40字符），不应使单行语句跨行。长字符串赋值请使用如下方式。为了使显示清晰， += 所在语句也应追加一个 Tab 字符缩进。
 
 ```Csharp
-
 string s = "A very long string ";
-
-s += "and it will be even longer ";
-
-s += "until it reaches the end.";
-
+    s += "and it will be even longer ";
+    s += "until it reaches the end.";
 ```
 
 如果语句无法避免地跨行，请在每一个新行前追加 Tab 字符。
 
 ```Csharp
-
 VeryLongObject.RatherLongerMethod
-
-(WithLongestParameterInDroidBeta);
-
+    (WithLongestParameterInDroidBeta);
 ```
 
 在制作方法简介时，应使用如下的 XML 格式：
 
 ```Csharp
-
 ///<summary>
-
 ///Method <c>Sum(int, int)</c> returns an int value of the sum of the input numbers.
-
 ///</summary>
-
 int Sum(int a, int b)
-
 {
-
-return a + b;
-
+    return a + b;
 }
-
 ```
 
 ## 建议规范
