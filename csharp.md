@@ -1,4 +1,4 @@
-# DroidBeta C# 格式规范
+# DroidBeta Dev Team C# 格式规范
 
 C# 是由 Microsoft Corp. 开发的新一代面向对象的程序设计语言，在桌面开发中广泛使用。养成良好的格式规范对学好 C# 语言有很大帮助。
 
