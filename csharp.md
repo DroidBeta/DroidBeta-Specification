@@ -2,7 +2,7 @@
 
 C# 是由 Microsoft Corp. 开发的新一代面向对象的程序设计语言，在桌面开发中广泛使用。养成良好的格式规范对学好 C# 语言有很大帮助。
 
-DroidBeta C# 格式规范基于 C 系列语言的 Allman 编码格式制定，由强制规范与建议规范组成。
+DroidBeta Dev Team C# 格式规范基于 C 系列语言的 Allman 编码格式制定，由强制规范与建议规范组成。
 
 ## 强制规范
 
@@ -31,7 +31,7 @@ DroidBeta 建议使用 Tab 字符（ `\t` ，`\u0009`， `	`）作为缩进字�
 
 运算符与前后变量或常量间保留一个空格，但成员运算符（点号， `.` ）和圆括号、方括号前后不空格；逗号、分号前面空格，但后面不空格。
 
-```Csharp
+```csharp
 using System;
 namespace MyConsoleApplication
 {
@@ -55,7 +55,7 @@ namespace MyConsoleApplication
 
 尽量避免使用过长语句。除非语句长度过长（超过40字符），不应使单行语句跨行。长字符串赋值请使用如下方式。为了使显示清晰，`+=`所在语句也应追加一个 Tab 字符缩进。
 
-```Csharp
+```csharp
 string s = "A very long string ";
     s += "and it will be even longer ";
     s += "until it reaches the end.";
@@ -63,14 +63,14 @@ string s = "A very long string ";
 
 如果语句无法避免地跨行，请在每一个新行前追加 Tab 字符。
 
-```Csharp
+```csharp
 VeryLongObject.RatherLongerMethod
     (WithLongestParameterInDroidBeta);
 ```
 
 在制作方法简介时，应使用如下的 XML 格式：
 
-```Csharp
+```csharp
 ///<summary>
 ///Method <c>Sum(int, int)</c> returns an int value of the sum of the input numbers.
 ///</summary>
