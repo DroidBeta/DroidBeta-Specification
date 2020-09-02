@@ -10,8 +10,7 @@ DroidBeta Dev Team C# 格式规范基于 C 系列语言的 Allman 编码格式�
 
 * 关于缩进
 
-DroidBeta 建议使用 Tab 字符（ `\t` ，`\u0009`， `	`）作为缩进字符，并将 Tab 宽度设为 4 个半角空格¹。若 Tab 显示不正常也可直接使用 4 个半角空格代替，但在发布至团队协作项目或开源时应替换为 Tab 字符。
-¹：本文中为保持在 GitHub 上显示格式正常，使用了半角空格的形式。
+DroidBeta 建议使用 Tab 字符（ `\t` ，`\u0009`， `	`）作为缩进字符，并将 Tab 宽度设为 4 个半角空格。若 Tab 显示不正常也可直接使用 4 个半角空格代替，但在发布至团队协作项目或开源时应替换为 Tab 字符。
 
 在定义方法、使用多行语句时，左大括号应在方法类型定义或语句头下一行，并与函数类型左对齐。方法体或语句体应在大括号基础上缩进一个 Tab 字符。
 
@@ -35,37 +34,38 @@ DroidBeta 建议使用 Tab 字符（ `\t` ，`\u0009`， `	`）作为缩进字�
 using System;
 namespace MyConsoleApplication
 {
-    public class MyConsole
-    {
-        public static void Main()
-        {
-            int sum, addend1, addend2;
-            string outputString;
-            addend1 = Convert.ToInt32(Console.ReadLine());
-            addend2 = Convert.ToInt32(Console.ReadLine());
-            sum = addend1 + addend2;
-            outputString = String.Format("{0} + {1} = {2}", addend1, addend2, sum);
-            Console.WriteLine(outputString);
-        }
-    }
+	public class MyConsole
+	{
+		public static void Main()
+		{
+			int sum, addend1, addend2;
+			string outputString;
+			addend1 = Convert.ToInt32(Console.ReadLine());
+			addend2 = Convert.ToInt32(Console.ReadLine());
+			sum = addend1 + addend2;
+			outputString = String.Format("{0} + {1} = {2}", addend1, addend2, sum);
+			Console.WriteLine(outputString);
+		}
+	}
 }
 ```
 
 * 关于长语句问题
 
-尽量避免使用过长语句。除非语句长度过长（超过40字符），不应使单行语句跨行。长字符串赋值请使用如下方式。为了使显示清晰，`+=`所在语句也应追加一个 Tab 字符缩进。
-
-```csharp
-string s = "A very long string ";
-    s += "and it will be even longer ";
-    s += "until it reaches the end.";
-```
-
+尽量避免使用过长语句。除非语句长度过长（超过40字符），不应使单行语句跨行。
 如果语句无法避免地跨行，请在每一个新行前追加 Tab 字符。
 
 ```csharp
 VeryLongObject.RatherLongerMethod
-    (WithLongestParameterInDroidBeta);
+	(WithLongestParameterInDroidBeta);
+```
+
+长字符串赋值请使用如下方式。为了使显示清晰，`+`所在语句也应追加一个 Tab 字符缩进。
+
+```csharp
+string longString = "A very long string "
+	+ "and it will be even longer "
+	+ "until it reaches the end.";
 ```
 
 在制作方法简介时，应使用如下的 XML 格式：
@@ -76,7 +76,7 @@ VeryLongObject.RatherLongerMethod
 ///</summary>
 int Sum(int a, int b)
 {
-    return a + b;
+	return a + b;
 }
 ```
 
