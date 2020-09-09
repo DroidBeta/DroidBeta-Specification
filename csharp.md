@@ -32,6 +32,7 @@ DroidBeta 建议使用 Tab 字符（ `\t` ，`\u0009`， `	`）作为缩进字�
 
 ```csharp
 using System;
+
 namespace MyConsoleApplication
 {
 	public class MyConsole
@@ -60,7 +61,7 @@ VeryLongObject.RatherLongerMethod
 	(WithLongestParameterInDroidBeta);
 ```
 
-长字符串赋值请使用如下方式。为了使显示清晰，`+`所在语句也应追加一个 Tab 字符缩进。
+长字符串赋值请使用如下方式。为了使显示清晰，`+` 所在语句也应追加一个 Tab 字符缩进。
 
 ```csharp
 string longString = "A very long string "
