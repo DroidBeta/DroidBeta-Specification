@@ -34,7 +34,7 @@ DroidBeta Dev Team 建议使用合理的标记头以合理区分各项 Commit �
 | ----- | ----- |
 | Dev | 开发内容，用于新增功能等 |
 | Fix | 修正内容，修正错误或漏洞 |
-| Opz | 优化代码，优化结构等 |
+| Opt | 优化代码，优化结构等 |
 | Del | 删除代码，去除功能 |
 
 | 内容 | 备注 |
@@ -50,13 +50,13 @@ DroidBeta Dev Team 建议使用合理的标记头以合理区分各项 Commit �
 | Frame | 框架 |
 | UI | UI |
 | Library | 二进制库 |
-| `etc` | `其余，待补充` |
+| **etc** | **待补充** |
 
 无论是怎样等标记头，其标记内容均需使用相同拼写方式，例如完全小写，首字母大写以及完全大写。
 
 ```bash
 正确示范:
-git commit -m "[DEV] Uodate list."
+git commit -m "[DEV] Update list."
 git commit -m "[FIX] Wrong array."
 
 错误示范:
