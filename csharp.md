@@ -10,9 +10,9 @@ DroidBeta Dev Team C# 格式规范基于 C 系列语言的 Allman 编码格式�
 
 * 关于缩进
 
-DroidBeta 建议使用 Tab 字符（ `\t` ，`\u0009`， `	`）作为缩进字符，并将 Tab 宽度设为 4 个半角空格。若 Tab 显示不正常也可直接使用 4 个半角空格代替，但在发布至团队协作项目或开源时应替换为 Tab 字符。
+DroidBeta 建议使用半角空格字符（` `,`\u0020`）作为缩进字符，单次缩进宽度设为 4 个半角空格。若半角空格使用不便，在本机编码时可用 Tab 字符代替，但在发布至团队协作项目或开源时应替换为空格字符。
 
-在定义方法、使用多行语句时，左大括号应在方法类型定义或语句头下一行，并与函数类型左对齐。方法体或语句体应在大括号基础上缩进一个 Tab 字符。
+在定义方法、使用多行语句时，左大括号应在方法类型定义或语句头下一行，并与函数类型左对齐。方法体或语句体应在大括号基础上缩进一个单位。
 
 * 关于引用外部命名空间
 
@@ -35,19 +35,19 @@ using System;
 
 namespace MyConsoleApplication
 {
-	public class MyConsole
-	{
-		public static void Main()
-		{
-			int sum, addend1, addend2;
-			string outputString;
-			addend1 = Convert.ToInt32(Console.ReadLine());
-			addend2 = Convert.ToInt32(Console.ReadLine());
-			sum = addend1 + addend2;
-			outputString = String.Format("{0} + {1} = {2}", addend1, addend2, sum);
-			Console.WriteLine(outputString);
-		}
-	}
+    public class MyConsole
+    {
+        public static void Main()
+        {
+            int sum, addend1, addend2;
+            string outputString;
+            addend1 = Convert.ToInt32(Console.ReadLine());
+            addend2 = Convert.ToInt32(Console.ReadLine());
+            sum = addend1 + addend2;
+            outputString = String.Format("{0} + {1} = {2}", addend1, addend2, sum);
+            Console.WriteLine(outputString);
+        }
+    }
 }
 ```
 
@@ -58,15 +58,15 @@ namespace MyConsoleApplication
 
 ```csharp
 VeryLongObject.RatherLongerMethod
-	(WithLongestParameterInDroidBeta);
+    (WithLongestParameterEverSeen);
 ```
 
 长字符串赋值请使用如下方式。为了使显示清晰，`+` 所在语句也应追加一个 Tab 字符缩进。
 
 ```csharp
 string longString = "A very long string "
-	+ "and it will be even longer "
-	+ "until it reaches the end.";
+    + "and it will be even longer "
+    + "until it reaches the end.";
 ```
 
 在制作方法简介时，应使用如下的 XML 格式：
@@ -75,10 +75,7 @@ string longString = "A very long string "
 ///<summary>
 ///Method <c>Sum(int, int)</c> returns an int value representing the sum of both input numbers.
 ///</summary>
-int Sum(int a, int b)
-{
-	return a + b;
-}
+int Sum(int a, int b) => a + b;
 ```
 
 ## 建议规范
@@ -89,6 +86,6 @@ int Sum(int a, int b)
 
 在代码中，词形对词语的含义具有非常重要的表示作用。例如，动词表示行为，形容词表示状态，复数名词表示一组同类物体。英语中绝大多数词汇在不同语境下有不同形式。
 
-在 C# 代码中，方法名应使用动词或动词短语，`bool` 类型的属性名与变量名应使用 be 动词 + 形容词或形容词性短语，非 `bool` 类型的属性名、变量名以及类名、对象名应使用名词或名词性短语（一般），其构成的集合应使用其复数形式或集体名词，其他具体语境下应根据实际情况灵活选用最合适的词性。
+在 C# 代码中，方法名应使用动词或动词短语，`bool` 类型的属性名与变量名应使用 be 动词 + 形容词或形容词性短语，非 `bool` 类型的属性名、变量名以及类名、对象名应使用名词或名词性短语（一般为单数），其构成的集合应使用其复数形式或集体名词，其他具体语境下应根据实际情况灵活选用最合适的词性。
 
 `待完成` `Waiting to be completed`
